@@ -1,0 +1,237 @@
+  	<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Megaevents - UTKANSH'23 - Cultural Fest NIT Jalandhar">
+  <meta name="description" content="Utkansh'23 23-26 March.UTKANSH the cultural fest of NITJ is the biggest cultural fest of North India and is held in National Institute of Technology, Jalandhar">
+  <meta name="keywords" content="Utkansh, utkansh, UTKANSH, NITJ, UTKANSH NITJ, UTKANSH 2023, Cultural fest NIT Jalandhar, Utkansh NIT Jalandhar, NIT Jalandhar fest, nit jalandhar fest, nit jalandhar fest 2023, Utkansh'23, utkansh">
+
+    <link rel="icon" href="img/utkanshLogo.png" type="image/png">
+  <title>Clubs and Events-Utkansh '23</title>
+  <link rel="stylesheet" href="css/navbarreset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/navbar.css"> <!-- Resource style -->
+  <script src="js/modernizer.js"></script> <!-- Modernizr -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+    <script src="js/nav.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/bganimations.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <style>
+ body {
+     
+     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/night_3.png) fixed ;
+     background-size: auto 100vh;
+     animation: gradient 15s ease infinite;
+ }
+
+ @keyframes gradient {
+     0% {
+         background-position: 0 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0 50%;
+     }
+ }
+
+   
+   </style>
+  
+</head>
+<body>
+    <header>
+            <a class="cd-logo" href="index.html"><img src="img/utkanshLogo.png" alt="Logo"></a>
+        </header>
+    
+    <nav>
+    <ul class="cd-primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="megaevents.html">Mega Events</a></li>
+        <li><a href="clubs.html">Clubs and Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="core&#32;members.html">Team Utkansh</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="tshirt.html">Merchandise</a></li>
+        <li><a href="accommodation.html">Event fee and Accommodation</a></li>
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li id="login"><a href="register.html" ><h2>Register here</h2></a></li>
+        <li id="sign-out" style="display:none;"><a href="user.html" ><h2>Dashboard</h2></a></li>
+    </ul>
+</nav>
+    
+        <div class="cd-overlay-nav">
+            <span></span>
+        </div> <!-- cd-overlay-nav -->
+    
+        <div class="cd-overlay-content">
+            <span></span>
+        </div> <!-- cd-overlay-content -->
+    
+        <a href="clubs.html#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+        <section id="heading"></section>
+        <br/><br/>
+        <div class="entry-title ">
+            <h1 class="text-center animated bounce" style="letter-spacing:8px">Clubs and Events</h1>
+        </div><!-- entry-title -->
+
+        
+            <div class="container">
+                        <div class="row the-complete-lineup-artists">
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image ">
+                                    <a href="clubs&#32;and&#32;events/bhangra.html"> <img src="clubs/bhangra.png" > </a>
+                                </figure><!-- featured-image -->
+
+                                <h2 >Bhangra</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo " >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/dance.html"> <img src="clubs/dance.png" alt=""> </a>
+                                    
+                                </figure><!-- featured-image -->
+
+                                <h2>Dance</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo"  >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/ladc.html"> <img src="clubs/debating.png" alt=""> </a>
+                        
+                                </figure><!-- featured-image -->
+
+                                <h2>Debating</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/drama.html"> <img src="clubs/drama.png" alt=""> </a>
+                        
+                                </figure><!-- featured-image -->
+
+                                <h2>Drama</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/fas.html"> <img src="clubs/fine_arts.png" alt=""> </a>
+                                   
+                                </figure><!-- featured-image -->
+
+                                <h2>Fine Arts</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/fitness.html"> <img src="clubs/gym.png" alt=""> </a>
+
+                                </figure><!-- featured-image -->
+
+                                <h2>Fitness</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/informal.html"> <img src="clubs/informal.png" alt=""> </a>
+                        
+                                </figure><!-- featured-image -->
+
+                                <h2>Informal Events</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/movie.html"> <img src="clubs/movie.png" alt=""> </a>
+                        
+                                </figure><!-- featured-image -->
+
+                                <h2>Movie</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/music.html"> <img src="clubs/music.png" alt=""> </a>
+                                  
+                                </figure><!-- featured-image -->
+
+                                <h2>Music</h2>
+                            </div><!-- artist-single -->
+
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/photoclub.html"> <img src="clubs/netra.png" alt=""> </a>
+                        
+                                </figure><!-- featured-image -->
+
+                                <h2>Photography</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/quest.html"> <img src="clubs/quest.png" alt=""> </a>
+                                 
+                                </figure><!-- featured-image -->
+
+                                <h2>Quest</h2>
+                            </div><!-- artist-single -->
+
+                            <div class="col-6 col-md-4 col-lg-3 artist-single questo" >
+                                <figure class="featured-image">
+                                    <a href="clubs&#32;and&#32;events/rajbhasha.html"> <img src="clubs/rajbhasa.png" alt=""> </a>
+                        
+                                </figure><!-- featured-image -->
+
+                                <h2>Rajbhasha Samiti</h2>
+                            </div><!-- artist-single -->
+                        </div><!-- the-complete-lineup-artists -->
+                    </div><!-- the-complete-lineup -->
+
+
+        <footer class="footer_area">
+            <div class="container">
+                <div class="row footer_bottom justify-content-center">
+                    <p class="col-lg-8 col-sm-12 footer-text">
+    Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="developers.html" target="_blank">WEB AND APP TEAM UTKANSH</a>
+   <br> Copyright &copy; Utkansh <script>document.write(new Date().getFullYear());</script></p>
+                </div>
+            </div>
+        </footer>
+       <!--All SCRIPTS -->
+    <!-- SVG jQuery -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/svg.js"></script>
+    <!-- NAvbar jQuery -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+    
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+    </html>

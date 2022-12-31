@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Megaevents - UTKANSH'23 - Cultural Fest NIT Jalandhar">
+    <meta name="description" content="Utkansh'23 23-26 March.UTKANSH the cultural fest of NITJ is the biggest cultural fest of North India and is held in National Institute of Technology, Jalandhar">
+    <meta name="keywords" content="Utkansh, utkansh, UTKANSH, NITJ, UTKANSH NITJ, UTKANSH 2023, Cultural fest NIT Jalandhar, Utkansh NIT Jalandhar, NIT Jalandhar fest, nit jalandhar fest, nit jalandhar fest 2023, Utkansh'23, utkansh">
+
+    <link rel="icon" href="img/utkanshLogo.png" type="image/png">
+    <title>UTKANSH '23</title>
+    <link rel="stylesheet" href="css/navbarreset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/navbar.css"> <!-- Resource style -->
+    <script src="js/modernizer.js"></script> <!-- Modernizr -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/qrcode.js"></script>
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        h3 {
+            color: black;
+        }
+
+        h4 {
+            color: black;
+        }
+
+        #user_id h1 {
+            margin: 5px auto;
+            font-size: 2.5rem;
+            padding-bottom: 5%;
+        }
+
+        #user_id ul li {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+
+        .loader {
+            margin: auto;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .qr {
+            width: 200%;
+            height: 200%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            color: black;
+            font-weight: 400;
+        }
+    </style>
+
+<body>
+<header>
+    <a class="cd-logo" href="index.html"><img src="img/utkanshLogo.png" alt="Logo"></a>
+</header>
+
+<nav>
+    <ul class="cd-primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="megaevents.html">Mega Events</a></li>
+        <li><a href="clubs.html">Clubs and Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="core&#32;members.html">Team Utkansh</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="tshirt.html">Merchandise</a></li>
+        <li><a href="accommodation.html">Event fee and Accommodation</a></li>
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li id="login"><a href="register.html"><h2>Register here</h2></a></li>
+        <li id="sign-out" style="display:none;"><a href="user.html"><h2>Dashboard</h2></a></li>
+    </ul>
+</nav>
+
+
+<div class="cd-overlay-nav">
+    <span></span>
+</div> <!-- cd-overlay-nav -->
+
+<div class="cd-overlay-content">
+    <span></span>
+</div> <!-- cd-overlay-content -->
+
+<a href="user.html#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5" id="user_container">
+
+                <div id="loader" class="loader"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- NAvbar jQuery -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='js/circle-progress.min.js'></script>
+<script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+
+<script type="text/javascript">
+    var firebaseConfig = {
+        apiKey: "AIzaSyA4klkL1c57gIbCS7kGGu5mlOPCNtL1Gsw",
+        authDomain: "utkansh2020-7858e.firebaseapp.com",
+        databaseURL: "https://utkansh2020-7858e.firebaseio.com",
+        projectId: "utkansh2020-7858e",
+        storageBucket: "utkansh2020-7858e.appspot.com",
+        messagingSenderId: "907622140597",
+        appId: "1:907622140597:web:60c069b5b2ce8e024accfc"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    firebase.auth().onAuthStateChanged(async function (user) {
+        if (user) {
+            let utkQR;
+            window.user = user;
+            document.getElementById('sign-out').style.display = "block";
+            document.getElementById('login').style.display = "none";
+
+
+            const db = await firebase.firestore();
+
+            await db.collection("users").doc("UTK_" + (user.phoneNumber.substring(3))).get()
+                .then(async doc => {
+                    if (doc.exists) {
+
+
+                        let Events = "<ul><br/>";
+
+                        await db.collection("users").doc("UTK_" + (user.phoneNumber.substring(3))).collection("events").get().then((snapshot) => {
+                            snapshot.forEach(function (element, index) {
+                                Events += `<li><p>${element.id}</p></li><br/>`;
+
+                            });
+
+                        });
+
+                        Events += "</ul>";
+                        utkQR = "UTK_" + (user.phoneNumber.substring(3));
+                        const USERHTML = `<div class="card-body" id = "user_id">
+                                          <h1 class="card-title text-center">Dashboard</h1>
+                                          <div class="row">
+
+                                          <div class="col-lg-6">
+                                          <div id="output" class="qr"></div>
+                                          </div>
+                                          <div class="col-lg-6">
+                                          <p>NAME: ${doc.data().Name}</p>
+                                          <p>NUMBER: ${doc.data().PhoneNumber}</p>
+                                          <p >UTK ID: ${"UTK_" + (user.phoneNumber.substring(3))}</p>
+                                        <button onclick="signOut()" class="btn align-item-center btn-outline-dark ">Sign Out</button>
+                                          </div>
+                                          </div>
+                                          <div class="row justify-content-center m-2">
+                                          <h5 style="color: #000000" class="text-center">Events Registered</h5>
+                                          </div>
+                                             <div>${Events}</div>
+                                           </div>
+
+                                    `;
+                        document.getElementById("loader").style = "display : none;";
+                        document.getElementById("user_container").innerHTML = USERHTML;
+
+                    }
+
+                })
+                .catch(err => {
+                    console.log('Error getting document', err);
+                });
+
+
+            let qrcode = new QRCode("output", {
+                text: utkQR,
+                width: 177,
+                height: 177,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        } else
+            window.location = "/index.html";
+    });
+    const signOut = async function () {
+        await firebase.auth().signOut().then(function () {
+            window.location = '/index.html';
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+
+    /*document.body.addEventListener('click', ()=>{
+      qrcode.clear();
+      qrcode.makeCode("http://google.ca/");
+    })
+*/
+</script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Megaevents - UTKANSH'23 - Cultural Fest NIT Jalandhar">
+    <meta name="description" content="Utkansh'23 23-26 March.UTKANSH the cultural fest of NITJ is the biggest cultural fest of North India and is held in National Institute of Technology, Jalandhar">
+    <meta name="keywords" content="Utkansh, utkansh, UTKANSH, NITJ, UTKANSH NITJ, UTKANSH 2023, Cultural fest NIT Jalandhar, Utkansh NIT Jalandhar, NIT Jalandhar fest, nit jalandhar fest, nit jalandhar fest 2023, Utkansh'23, utkansh">
+
+    <link rel="icon" href="img/utkanshLogo.png" type="image/png">
+    <title>Developers Team - UTKANSH'23</title>
+    <link rel="stylesheet" href="css/navbarreset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/navbar.css"> <!-- Resource style -->
+    <script src="js/modernizer.js"></script> <!-- Modernizr -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+    <script src="js/nav.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/night_perfect.png) fixed ;
+            background-size: auto 100vh;
+            animation: gradient 15s ease infinite;
+
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+    
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="cd-logo" href="index.html"><img src="img/utkanshLogo.png" alt="Logo"></a>
+</header>
+
+<nav>
+    <ul class="cd-primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="megaevents.html">Mega Events</a></li>
+        <li><a href="clubs.html">Clubs and Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="core&#32;members.html">Team Utkansh</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="tshirt.html">Merchandise</a></li>
+        <li><a href="accommodation.html">Event fee and Accommodation</a></li>
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li id="login"><a href="register.html" ><h2>Register here</h2></a></li>
+        <li id="sign-out" style="display:none;"><a href="user.html" ><h2>Dashboard</h2></a></li>
+    </ul>
+</nav>
+
+
+<div class="cd-overlay-nav">
+    <span></span>
+</div> <!-- cd-overlay-nav -->
+
+<div class="cd-overlay-content">
+    <span></span>
+</div> <!-- cd-overlay-content -->
+
+<a href="developers.html#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+<br/><br/>
+<section id="heading">
+    <div class="mb-5">
+        <h1 class="text-center">Developers</h1>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Abhishek.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Abhishek <br> Kaushal</h3>
+                        <h4 class="title">CSE, Final Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/kaushal__abhi/" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/abhishek-kaushal-nitj/" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/sandeep.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Sandeep <br>Kumar</h3>
+                        <h4 class="title">ECE, Final Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/sdpkmr96/" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/sandeep-kumar-0ab987145" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Adamya.jpg" alt="akash">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Adamya <br> Mishra</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/invincibleadam28" target="_blank" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/adamya-mishra-810508194" target="_blank"
+                               class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Akash.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Akash <br> Chhabra</h3>
+                        <h4 class="title">ECE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://instagram.com/_aakash__chhabra" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/akashchhabra710" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/divyansha.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Divyansha <br> Sharma</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/divyansha_sharma10" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/divyansha-sharma-22168b180" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-5 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Gagan.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Gagandeep <br> Singh</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/gagan_sroay" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="developers.html#" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Gurmeet.JPG" alt="akash">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Gurmeet <br></h3>
+                        <h4 class="title"><br><br>CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instgram.com/gurmeetkundu863" target="_blank" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/gurmeet-k-60037918a" target="_blank"
+                               class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Harsh.jpeg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Harsh <br> Badhai</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://instagram.com/frames_by._harsh" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/harsh-badhai-a9bb99183" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/jayant.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Jayant <br> Sharma</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/jayant__007/" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/jayant-sharma-665105174" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Kashyap.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Kashyap <br><br></h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="developers.html#" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/kashyap-goutam-592460199" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>     
+        </div>
+
+
+        <div class="row">
+		
+		    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/kunal.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Kunal <br> Garg</h3>
+                        <h4 class="title">IPE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/kunal_g_29/" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/kunal-garg-0b199517a" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/pawan.jpg" alt="akash">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Pawan <br> Kholiya</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/pa1_kholiya/" target="_blank" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/pawan-kholiya-70b24616b" target="_blank"
+                               class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+			
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/praveen.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Praveen <br><br></h3>
+                        <h4 class="title">ICE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/praveenhbnsh" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/praveen-agrawal-6b3b0b142" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+			
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/shilpy.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Shilpy <br></h3>
+                        <h4 class="title"><br><br>ICE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="Https://www.instagram.com/shilpy51/" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/shilpy-s-40667417a" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+			
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Shobhit.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Shobhit <br>Tewari </h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="developers.html#" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/shobhit-tewari-0bb0a816a/" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+			
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/tarun.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Tarun <br> Udainiya</h3>
+                        <h4 class="title">IPE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/tarun_blackhat21/?hl=en" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/tarun-udainiya-982407179/" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/Vikas.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Vikas <br> Sandhu</h3>
+                        <h4 class="title">CSE, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/vikas__sandhu/" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="developers.html#" class="fa fa-linkedin" aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="img/developers/viswash.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Vishwas <br><br></h3>
+                        <h4 class="title">IT, 2nd Year</h4>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://www.instagram.com/vishwas.tak/?igshid=ouygs7n4v0gk" class="fa fa-instagram"
+                               aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/vishwas-tak-ba1143155" class="fa fa-linkedin"
+                               aria-hidden="true"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="footer_area">
+    <div class="container">
+        <div class="row footer_bottom justify-content-center">
+            <p class="col-lg-8 col-sm-12 footer-text">
+                Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="developers.html" target="_blank">WEB
+                AND APP TEAM UTKANSH</a>
+                <br> Copyright &copy; Utkansh
+                <script>document.write(new Date().getFullYear());</script>
+            </p>
+        </div>
+    </div>
+</div>
+<!--All SCRIPTS -->
+<!-- SVG jQuery -->
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/svg.js"></script>
+<!-- NAvbar jQuery -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='js/circle-progress.min.js'></script>
+<script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+
+</body>
+</html>
