@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
     $(window).resize(function() {
       windowSize();
     });
-
+    // con = null;
     con = canvas[0].getContext('2d');
 
     for (var i = 0; i < 100; i++) {
