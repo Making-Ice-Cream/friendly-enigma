@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Register UTKANSH'20 - Cultural Fest NIT Jalandhar">
-    <meta name="description" content="Utkansh'20 20-22 March.UTKANSH the cultural fest of NITJ is the biggest cultural fest of North India and is held in National Institute of Technology, Jalandhar">
-    <meta name="keywords" content="Utkansh, utkansh, UTKANSH, NITJ, UTKANSH NITJ, UTKANSH 2020, Cultural fest NIT Jalandhar, Utkansh NIT Jalandhar, NIT Jalandhar fest, nit jalandhar fest, nit jalandhar fest 2020, Utkansh'20, utkansh">
-
+  <meta name="title" content="UTKANSH'23 - Cultural Fest NIT Jalandhar">
+  <meta name="description" content="Utkansh'23 23-26 March.UTKANSH the cultural fest of NITJ is the biggest cultural fest of North India and is held in National Institute of Technology, Jalandhar">
+  <meta name="keywords" content="Utkansh, utkansh, UTKANSH, NITJ, UTKANSH NITJ, UTKANSH 2023, Cultural fest NIT Jalandhar, Utkansh NIT Jalandhar, NIT Jalandhar fest, nit jalandhar fest, nit jalandhar fest 2023, Utkansh'23, utkansh">
     <link rel="icon" href="img/utkanshLogo.png" type="image/png">
-  <title>Sign In-UTKANSH '20</title>
+  <title>Sign In-UTKANSH'23</title>
   <link rel="stylesheet" href="css/navbarreset.css"> <!-- CSS reset -->
   <link rel="stylesheet" href="css/navbar.css"> <!-- Resource style -->
   <script src="js/modernizer.js"></script> <!-- Modernizr -->
@@ -20,6 +19,9 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
      <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>   
     <script src="js/nav.js"></script>
     <!-- Swiper CSS -->
    <link rel="stylesheet" href="css/style.css">
@@ -130,24 +132,25 @@
     <script type='text/javascript' src='js/custom.js'></script>
    
 
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>   
-
-    <script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>    -->
+   
+    <!-- <script>
       // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyA4klkL1c57gIbCS7kGGu5mlOPCNtL1Gsw",
-        authDomain: "utkansh2020-7858e.firebaseapp.com",
-        databaseURL: "https://utkansh2020-7858e.firebaseio.com",
-        projectId: "utkansh2020-7858e",
-        storageBucket: "utkansh2020-7858e.appspot.com",
-        messagingSenderId: "907622140597",
-        appId: "1:907622140597:web:60c069b5b2ce8e024accfc"
+       firebaseConfig = {
+          apiKey: "AIzaSyDsLGQUDdrrrxq5V_mcTUY1HpGT8168P8A",
+          authDomain: "utkansh-2023-nitj.firebaseapp.com",
+          projectId: "utkansh-2023-nitj",
+          storageBucket: "utkansh-2023-nitj.appspot.com",
+          messagingSenderId: "754641140210",
+          appId: "1:754641140210:web:1ff8239de9a1b27ad1936b",
+          measurementId: "G-3EZ2KXFV0M",
+          databaseURL:"https://utkansh-2023-nitj-default-rtdb.firebaseio.com/"
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-    </script>
+    </script> -->
 
 
     <script type="text/javascript">
@@ -158,7 +161,8 @@
          callbacks: {
           signInSuccessWithAuthResult: function(authResult, redirectUrl) {
                 window.user = authResult.user;
-                console.log(authResult , authResult.user);
+                // console.log(window.user);
+                // console.log(authResult , authResult.user);
                 afterAuthRedirect();
             return false;
           },
@@ -208,6 +212,7 @@
     async function afterAuthRedirect() {
 
       const db = await firebase.firestore();
+      // console.log(await db.collection('users'));
 
       await db.collection('users').doc("UTK_"+window.user.phoneNumber.substring(3)).get()
         .then(doc => {
@@ -225,6 +230,43 @@
     }
 
   </script>
+  
+
+  <!-- delete this after -->
+  <script>
+
+   async function find()
+   {
+    const db = await firebase.firestore();
+    alert(await db.collection('users').doc("utk_").get());
+  
+      await db.collection('users').doc("utk_").get()
+        .then(doc => {
+          if (!doc.exists) {
+            console.log(doc)
+            // alert("Hello");
+            //  window.location = "/furtherDetails.html";
+          } else {
+            console.log(doc.data().phoneNumber)
+            // window.location = "/main.html";
+          }
+        })
+        .catch(err => {
+          console.log('Error getting document', err);
+        });
+
+      
+    
+
+  }
+   find();
+
+  </script>
+
+
+
+  <!-- end of delete -->
+
 </div>
     </body>
 </html>

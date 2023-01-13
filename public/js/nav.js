@@ -1,11 +1,12 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyA4klkL1c57gIbCS7kGGu5mlOPCNtL1Gsw",
-    authDomain: "utkansh2020-7858e.firebaseapp.com",
-    databaseURL: "https://utkansh2020-7858e.firebaseio.com",
-    projectId: "utkansh2020-7858e",
-    storageBucket: "utkansh2020-7858e.appspot.com",
-    messagingSenderId: "907622140597",
-    appId: "1:907622140597:web:60c069b5b2ce8e024accfc"
+let firebaseConfig = {
+    apiKey: "AIzaSyDsLGQUDdrrrxq5V_mcTUY1HpGT8168P8A",
+    authDomain: "utkansh-2023-nitj.firebaseapp.com",
+    projectId: "utkansh-2023-nitj",
+    storageBucket: "utkansh-2023-nitj.appspot.com",
+    messagingSenderId: "754641140210",
+    appId: "1:754641140210:web:1ff8239de9a1b27ad1936b",
+    measurementId: "G-3EZ2KXFV0M",
+    databaseURL:"https://utkansh-2023-nitj-default-rtdb.firebaseio.com/"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
