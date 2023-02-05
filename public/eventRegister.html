@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Megaevents - UTKANSH'23 - Cultural Fest NIT Jalandhar">
+    <meta name="description" content="Utkansh'23 23-26 March.UTKANSH the cultural fest of NITJ is the biggest cultural fest of North India and is held in National Institute of Technology, Jalandhar">
+    <meta name="keywords" content="Utkansh, utkansh, UTKANSH, NITJ, UTKANSH NITJ, UTKANSH 2023, Cultural fest NIT Jalandhar, Utkansh NIT Jalandhar, NIT Jalandhar fest, nit jalandhar fest, nit jalandhar fest 2023, Utkansh'23, utkansh">
+
+    <link rel="icon" href="img/utkanshLogo.png" type="image/png">
+    <title>UTKANSH '23</title>
+    <link rel="stylesheet" href="css/navbarreset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/navbar.css"> <!-- Resource style -->
+    <script src="js/modernizer.js"></script> <!-- Modernizr -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/qrcode.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        h3 {
+            color: black;
+        }
+
+        h4 {
+            color: black;
+        }
+
+        #user_id h1 {
+            margin: 5px auto;
+            font-size: 2.5rem;
+            padding-bottom: 5%;
+        }
+
+        #user_id ul li {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        #input_text_form{
+            color:rgba(66, 66, 66, 0.946);
+        }
+
+        .loader {
+            margin: auto;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+            display: none;
+        }
+
+        #delete_icon{
+            font-size: 19px;
+            color:black;
+            cursor: pointer;
+            transform:translateY(-15px);
+
+            
+        }
+        #delete_icon:hover{
+            color:red;
+
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .qr {
+            width: 200%;
+            height: 200%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            color: black;
+            font-weight: 400;
+        }
+    </style>
+
+<body>
+<header>
+    <a class="cd-logo" href="index.html"><img src="img/utkanshLogo.png" alt="Logo"></a>
+</header>
+
+<nav>
+    <ul class="cd-primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="megaevents.html">Mega Events</a></li>
+        <li><a href="clubs.html">Clubs and Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <!-- <li><a href="core&#32;members.html">Team Utkansh</a></li>
+        <li><a href="developers.html">Developers</a></li> -->
+        <li><a href="tshirt.html">Merchandise</a></li>
+        <li><a href="accommodation.html">Event fee and Accommodation</a></li>
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li id="login"><a href="register.html"><h2>Register here</h2></a></li>
+        <li id="sign-out" style="display:none;"><a href="user.html"><h2>Dashboard</h2></a></li>
+    </ul>
+</nav>
+
+
+<div class="cd-overlay-nav">
+    <span></span>
+</div> <!-- cd-overlay-nav -->
+
+<div class="cd-overlay-content">
+    <span></span>
+</div> <!-- cd-overlay-content -->
+
+<a href="eventRegister.html#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-md-9 col-lg-12 mx-auto">
+            <div class="card card-signin my-5"  id="user_container">
+
+                <div id="loader" class="loader"></div>
+                <div class="card-body" id ="user_id">
+                    <h1 class="card-title text-center" style id = "titleForEvent"></h1>
+                <div class="input-group input-group mt-4 container col-md-6">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Team Name</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                </div>
+
+                
+
+                <div class="card-body">
+                <form class="needs-validation container mx-5" novalidate>
+                    <div id = "need_to_add_dynamic_data">
+                        <div class="mb-3">
+                            <h2 style="color:grey">Details of 1st Member
+    
+                            
+                            </h2>
+                           
+                            
+                               
+                           
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3 mx-1 mr-0">
+                            <label for="validationTooltip01" id="input_text_form">First name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="firstNameValidation">
+                                    <i class="fa-solid fa-id-badge"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter First Name" aria-describedby="firstNameValidation" required>
+                                <div class="invalid-tooltip">
+                                First Name is Required
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-3">
+                            <label for="validationTooltip02" id="input_text_form">Last name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Last Name" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                Last Name is Required
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mx-3">
+                            <label for="validationTooltipUsername" id="input_text_form">Mobile Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Mobile Number" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                Mobile Number is Required
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <button class="btn btn-success" type="button" id="add_member">Add Member</button>
+                        <button class="btn btn-danger" type="button">Submit</button>
+                    </div>
+                    
+                  </form>
+                </div>
+                 
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- NAvbar jQuery -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+<script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+<script type='text/javascript' src='js/circle-progress.min.js'></script>
+<script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+<script type='text/javascript' src='js/custom.js'></script>
+
+
+<script>
+
+    const allEvents = [{eventId: "mu0", eventName: "Mega Sonic", eventDate: "24 March, 2023", teamSizeMax: 8, teamSizeMin: 5, feeExternal: 100, feeNitj: 50},
+    {eventId: "mu1", eventName: "The Voice", eventDate: "24 March, 2023", teamSizeMax: 5, teamSizeMin: 3, feeExternal: 100, feeNitj: 50},
+    {eventId: "mu2", eventName: "INSTRUMENTATIA", eventDate: "24 March, 2023", teamSizeMax: 2, teamSizeMin: 1, feeExternal: 0, feeNitj: 0},
+    {eventId: "mu3", eventName: "NITJ RAPSTAR", eventDate: "24 March, 2023", teamSizeMax: 1, teamSizeMin: 1, feeExternal: 0, feeNitj: 0}];
+    
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    
+    let currentEvent;
+
+    let value = params.code;
+
+    for(let i=0; i<allEvents.length; i++){
+        if(allEvents[i].eventId === value){
+            currentEvent = allEvents[i];
+            break;
+        }
+    }
+    const eventTitleHTML = `Registration In  ${currentEvent.eventName}`;
+    document.getElementById("titleForEvent").innerHTML = eventTitleHTML;
+    
+</script> 
+
+<script>
+ 
+ 
+ 
+
+
+  document.getElementById("add_member").addEventListener("click",()=>{
+    document.getElementById("loader").style = "display : block;";
+    addDynamicDataToForm(1);
+    document.getElementById("loader").style = "display : none;";
+  })
+
+
+  const addDynamicDataToForm = (no) =>{
+    var suffixArray = ["st" , "nd" , "rd","th","th","th","th","th","th","th","th" ,"th","th","th","th","th","th","th","th","th"];
+
+    let startIndex = parseInt(sessionStorage.getItem("startIndex")) || 2;
+
+    let Elem="" ;
+
+    let endIndex =  no + startIndex;
+
+    for(let i = startIndex ; i < endIndex ; i++){
+        Elem += `
+             <div class="mb-3 mt-4">
+                <h2 style="color:grey;display: inline;">Details of ${i}${suffixArray[i+1]} Member
+    
+                            
+                        </h2>
+                        <span>
+                            <i id="delete_icon" class="fa-sharp fa-solid fa-trash"></i>
+                        </span>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3 mx-1 mr-0">
+                            <label for="validationTooltip01" id="input_text_form">First name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="firstNameValidation">
+                                    <i class="fa-solid fa-id-badge"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter First Name" aria-describedby="firstNameValidation" required>
+                                <div class="invalid-tooltip">
+                                First Name is Required
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-3">
+                            <label for="validationTooltip02" id="input_text_form">Last name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Last Name" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                Last Name is Required
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mx-3">
+                            <label for="validationTooltipUsername" id="input_text_form">Mobile Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Mobile Number" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                Mobile Number is Required
+                                </div>
+                            </div>
+                            
+                            </div>
+                            
+                        </div>
+                    `
+    }
+
+    document.getElementById("need_to_add_dynamic_data").innerHTML += Elem;
+    let data = parseInt(startIndex) + parseInt(no);
+    console.log("from line 346" + data)
+    sessionStorage.removeItem("startIndex");
+    sessionStorage.setItem("startIndex" ,  data);
+  }
+
+
+  const addDynamicDataToFormWhenReload = (startI , endI) =>{
+    var suffixArray = ["st" , "nd" , "rd","th","th","th","th","th","th","th","th" ,"th","th","th","th","th","th","th","th","th"];
+
+    let startIndex =  startI
+
+    let Elem="" ;
+    let endIndex = endI
+
+    for(let i = startIndex ; i < endIndex ; i++){
+        Elem += `
+             <div class="mb-3 mt-4">
+                <h2 style="color:grey;display: inline;">Details of ${i}${suffixArray[i+1]} Member
+    
+                            
+                        </h2>
+                        <span>
+                            <i id="delete_icon"class="fa-sharp fa-solid fa-trash" onClick ="deleteButton()"></i>
+                        </span>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3 mx-1 mr-0">
+                            <label for="validationTooltip01" id="input_text_form">First name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="firstNameValidation">
+                                    <i class="fa-solid fa-id-badge"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter First Name" aria-describedby="firstNameValidation" required>
+                                <div class="invalid-tooltip">
+                                First Name is Required
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-3">
+                            <label for="validationTooltip02" id="input_text_form">Last name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Last Name" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                Last Name is Required
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mx-3">
+                            <label for="validationTooltipUsername" id="input_text_form">Mobile Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Enter Mobile Number" aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                Mobile Number is Required
+                                </div>
+                            </div>
+                            
+                            </div>
+                            
+                        </div>
+                    `
+    }
+
+    document.getElementById("need_to_add_dynamic_data").innerHTML += Elem;
+    let data = endIndex;
+    // console.log("from line 422" + data)
+    sessionStorage.removeItem("startIndex");
+    sessionStorage.setItem("startIndex" ,  data);
+
+  }
+
+ 
+
+
+    $(document).ready(()=>{
+        
+
+        $('div#need_to_add_dynamic_data').each(
+  function() {
+    let insideClassData  = ($('div.form-row', $(this)).length);
+
+    let DataFromSessionStorage = sessionStorage.getItem("startIndex")
+
+    if(DataFromSessionStorage != null && parseInt(DataFromSessionStorage)- insideClassData > 1){
+        addDynamicDataToFormWhenReload(2 ,  parseInt(DataFromSessionStorage));
+    }
+
+     }
+      );
+    })
+   
+   // delete button action
+
+   
+
+   const deleteButton = ()=>{
+    let sessionstorage = parseInt(sessionStorage.getItem("startIndex"));
+
+    if(sessionstorage > 1){
+        sessionStorage.setItem("startIndex" , sessionstorage - 1);
+         location.reload();
+    }
+   }
+
+</script>
+
+
+<!-- for taking query object -->
+
+
+
+</body>
+
+</html>

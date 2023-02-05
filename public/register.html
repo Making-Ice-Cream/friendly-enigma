@@ -216,10 +216,11 @@
 
       await db.collection('users').doc("UTK_"+window.user.phoneNumber.substring(3)).get()
         .then(doc => {
+          
           if (!doc.exists) {
              window.location = "/furtherDetails.html";
           } else {
-            window.location = "/main.html";
+            window.location = "/user.html";
           }
         })
         .catch(err => {
@@ -235,30 +236,31 @@
   <!-- delete this after -->
   <script>
 
-   async function find()
-   {
-    const db = await firebase.firestore();
-    alert(await db.collection('users').doc("utk_").get());
-  
-      await db.collection('users').doc("utk_").get()
-        .then(doc => {
-          if (!doc.exists) {
-            console.log(doc)
-            // alert("Hello");
-            //  window.location = "/furtherDetails.html";
-          } else {
-            console.log(doc.data().phoneNumber)
-            // window.location = "/main.html";
-          }
-        })
-        .catch(err => {
-          console.log('Error getting document', err);
-        });
+async function find()
+   {
+    const db = await firebase.firestore();
+      await  db.collection("users").doc("utk_").collection("events").doc("La88expEvWMxdkSigXwF")
+        .then(doc => {
 
-      
-    
+          //  console.log(await db.collection("users").doc("utk_").collection("events").get());
+//           if (doc.exists) {
+//             console.log("Found");
+//           } else {
+//             console.log("Not Found");
+//           }
+    console.log(doc.data());
+    // doc.forEach(function (element, index) {
+    //                             console.log(element.eventName)
 
-  }
+    //                         });
+        })
+        .catch(err => {
+          console.log('Error finding document', err);
+        });
+  }
+
+
+
    find();
 
   </script>

@@ -135,7 +135,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5" id="user_container">
+            <div class="card card-signin my-5" style="width: 465px !important;" id="user_container">
 
                 <div id="loader" class="loader"></div>
             </div>
@@ -163,7 +163,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     
         let firebaseConfig = {
                     apiKey: "AIzaSyDsLGQUDdrrrxq5V_mcTUY1HpGT8168P8A",
@@ -177,13 +177,7 @@
 
                 };
 
-        // apiKey: "AIzaSyDjbDQ4inQ51TRxlhEUvg4R4p6Bm5ACjmo",
-        // authDomain: "utkansh2023.firebaseapp.com",
-        // projectId: "utkansh2023",
-        // storageBucket: "utkansh2023.appspot.com",
-        // messagingSenderId: "322430407824",
-        // appId: "1:322430407824:web:1d10b28006f3bcddbff415",
-        // measurementId: "G-EDQEPQW984"
+        
 
    
     // Initialize Firebase
@@ -199,65 +193,68 @@
 
             const db = await firebase.firestore();
 
-            await db.collection("users").doc("UTK_" + (user.phoneNumber.substring(3))).get()
-                .then(async doc => {
-                    if (doc.exists) {
+            // await db.collection("users").doc("UTK_" + (user.phoneNumber.substring(3))).get()
+            //     .then(async doc => {
+            //         if (doc.exists) {
 
 
-                        let Events = "<ul><br/>";
+            //             let Events = "<ul><br/>";
 
-                        await db.collection("users").doc("UTK_" + (user.phoneNumber.substring(3))).collection("events").get().then((snapshot) => {
-                            snapshot.forEach(function (element, index) {
-                                Events += `<li><p>${element.id}</p></li><br/>`;
+            //             await db.collection("users").doc("UTK_" + (user.phoneNumber.substring(3))).collection("events").get().then((snapshot) => {
+            //                 snapshot.forEach(function (element, index) {
+            //                     Events += `<li><p>${element.id}</p></li><br/>`;
 
-                            });
+            //                 });
 
-                        });
+            //             });
 
-                        Events += "</ul>";
-                        utkQR = "UTK_" + (user.phoneNumber.substring(3));
-                        const USERHTML = `<div class="card-body" id = "user_id">
-                                          <h1 class="card-title text-center">Dashboard</h1>
-                                          <div class="row">
+                        // Events += "</ul>";
+                        // utkQR = "UTK_" + (user.phoneNumber.substring(3));
+                        // const USERHTML = `<div class="card-body" id = "user_id">
+                        //                   <h1 class="card-title text-center">Dashboard</h1>
+                        //                   <div class="row">
 
-                                          <div class="col-lg-6">
-                                          <div id="output" class="qr"></div>
-                                          </div>
-                                          <div class="col-lg-6">
-                                          <p>NAME: ${doc.data().Name}</p>
-                                          <p>NUMBER: ${doc.data().PhoneNumber}</p>
-                                          <p >UTK ID: ${"UTK_" + (user.phoneNumber.substring(3))}</p>
-                                        <button onclick="signOut()" class="btn align-item-center btn-outline-dark ">Sign Out</button>
-                                          </div>
-                                          </div>
-                                          <div class="row justify-content-center m-2">
-                                          <h5 style="color: #000000" class="text-center">Events Registered</h5>
-                                          </div>
-                                             <div>${Events}</div>
-                                           </div>
+                        //                   <div class="col-lg-6">
+                        //                   <div id="output" class="qr"></div>
+                        //                   </div>
+                        //                   <div class="col-lg-6">
+                        //                   <p>NAME: Deepak Yadav</p>
+                        //                   <p>NUMBER: 9306008049</p>
+                        //                   <p >UTK ID: Hello</p>
+                        //                 <button onclick="signOut()" class="btn align-item-center btn-outline-dark ">Sign Out</button>
+                        //                   </div>
+                        //                   </div>
+                        //                   <div class="row justify-content-center m-2">
+                        //                   <h5 style="color: #000000" class="text-center">Events Registered</h5>
+                        //                   </div>
+                                            
+                        //                    </div>
 
-                                    `;
-                        document.getElementById("loader").style = "display : none;";
-                        document.getElementById("user_container").innerHTML = USERHTML;
+                        //             `;
+                        // document.getElementById("loader").style = "display : none;";
+                        // document.getElementById("user_container").innerHTML = USERHTML;
 
-                    }
+                //     }
 
-                })
-                .catch(err => {
-                    console.log('Error getting document', err);
-                });
+                // })
+                // .catch(err => {
+                //     console.log('Error getting document', err);
+                // });
 
 
-            let qrcode = new QRCode("output", {
-                text: utkQR,
-                width: 177,
-                height: 177,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
+            // let qrcode = new QRCode("output", {
+            //     text: utkQR,
+            //     width: 177,
+            //     height: 177,
+            //     colorDark: "#000000",
+            //     colorLight: "#ffffff",
+            //     correctLevel: QRCode.CorrectLevel.H
+            // });
         } else
-            window.location = "/index.html";
+            {
+            //     alert("An error occured");
+            //  window.location = "/index.html";
+            }
     });
     const signOut = async function () {
         await firebase.auth().signOut().then(function () {
@@ -272,6 +269,9 @@
       qrcode.makeCode("http://google.ca/");
     })
 */
+</script> -->
+<script src = "js/addDataToUser.js">
+
 </script>
 </body>
 </html>

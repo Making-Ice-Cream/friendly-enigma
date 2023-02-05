@@ -403,7 +403,8 @@
 <script>
     for (let i = 0; i < 4; i++) {
         document.getElementById('mu' + i).addEventListener('click', function (event) {
-            window.location = "/event-register.html?code=" + event.target.name;
+            console.log(event.target.name)
+            window.location = "../eventRegister.html?code=" + event.target.id;
         })
     }
 
